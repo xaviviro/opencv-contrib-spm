@@ -44,7 +44,7 @@ jobs:
         working-directory: opencv
         run: |
           pip3 install pathlib
-          python3 platforms/apple/build_xcframework.py --contrib opencv_contrib
+          python3 platforms/apple/build_xcframework.py --contrib opencv_contrib -o build
         
       - name: Zip artifact
         working-directory: opencv
