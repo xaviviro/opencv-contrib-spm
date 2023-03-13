@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.PUSH_TO_OPENCV_SPM }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Fetch OpenCV latest version
         run: |
