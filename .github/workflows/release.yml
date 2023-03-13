@@ -39,7 +39,7 @@ jobs:
         with:
           repository: opencv/opencv_contrib
           ref: refs/tags/${{ steps.get_version.outputs.VERSION }}
-          path: 'opencv'
+          path: 'opencv/opencv_contrib'
           
       - name: Build xcframework
         working-directory: opencv
