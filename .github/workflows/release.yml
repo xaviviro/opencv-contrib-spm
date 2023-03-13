@@ -27,11 +27,6 @@ jobs:
         working-directory: opencv-spm
         run: echo "VERSION=$(cat .version)" >> $GITHUB_OUTPUT
         
-      - name: Get version
-        id: get_version_contrib
-        working-directory: opencv-spm
-        run: echo "VERSION=$(cat .version_contrib)" >> $GITHUB_OUTPUT
-
       - name: Checkout OpenCV
         uses: actions/checkout@v3
         with:
@@ -43,7 +38,6 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: opencv/opencv_contrib
-          ref: refs/tags/${{ steps.get_version_contrib.outputs.VERSION }}
           path: 'opencv/opencv_contrib'
           
       - name: Build xcframework
